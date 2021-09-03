@@ -8,7 +8,7 @@ namespace SportsWear2.Models
 {
     public class StockContextcs : DbContext
     {
-        private const string connectionString = "Server=(localdb)\\mssqllocaldb;Database=SportsWear;Trusted_Connection=False;";
+        private const string connectionString = "Server=(localdb)\\mssqllocaldb;Database=SportsWear1;Trusted_Connection=False;";
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -23,7 +23,7 @@ namespace SportsWear2.Models
 
     public class OrdersContext : DbContext
     {
-        private const string connectionString = "Server=(localdb)\\mssqllocaldb;Database=SportsWear;Trusted_Connection=False;";
+        private const string connectionString = "Server=(localdb)\\mssqllocaldb;Database=SportsWear1;Trusted_Connection=False;";
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
