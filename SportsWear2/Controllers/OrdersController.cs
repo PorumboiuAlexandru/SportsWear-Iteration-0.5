@@ -7,16 +7,17 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SportsWear2.Models;
 using SportsWear2.Controllers;
+using SportsWear2.Data;
 
 namespace OrderSystem.Controllers
 {
     public class OrdersController : Controller
     {
-        private readonly OrdersContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public OrdersController()
+        public OrdersController(ApplicationDbContext context)
         {
-            _context = new OrdersContext(); 
+            this._context = context;
             _context.Database.EnsureCreated();
         }
 

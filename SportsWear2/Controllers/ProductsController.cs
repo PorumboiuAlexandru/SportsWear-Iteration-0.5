@@ -5,17 +5,18 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using SportsWear2.Data;
 using SportsWear2.Models;
 
 namespace SportsWear2.Controllers
 {
     public class ProductsController : Controller
     {
-        private readonly StockContextcs _context;
+        private readonly ApplicationDbContext _context;
 
-        public ProductsController(StockContextcs context)
+        public ProductsController(ApplicationDbContext context)
         {
-            _context = context;
+            this._context = context;
             _context.Database.EnsureCreated();
         }
 

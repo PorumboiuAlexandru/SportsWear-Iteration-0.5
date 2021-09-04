@@ -6,20 +6,23 @@
     <h1 class="display-4">Welcome</h1>
 
 </div>
+@if (User.IsInRole("Admin"))
+{
+    <div class="HomeStock">
 
-<div class="HomeStock">
+        <a href="@Url.Action("Index","Products")">
 
-    <a href="@Url.Action("Index","Products")">
-
-    </a>
-    <a href="@Url.Action("Index","Products")">Products</a>
+        </a>
+        <a href="@Url.Action("Index","Products")">Products</a>
 
 
-</div>
+    </div>
+}
+
 <div class="HomeStock">
 
     <a href="@Url.Action("Index","Stocks")">
-        
+
     </a>
     <a href="@Url.Action("Index","Stocks")">Stock List</a>
 
@@ -29,7 +32,7 @@
 <div class="HomeShop">
 
     <a href="@Url.Action("Index","Shop")">
-        
+
     </a>
     <a href="@Url.Action("Index","Shop")">Shop</a>
 
@@ -38,7 +41,7 @@
 <div class="HomeCart">
 
     <a href="@Url.Action("Index","Cart")">
-        
+
     </a>
     <a href="@Url.Action("Index","Cart")">Your Cart</a>
 </div>
@@ -46,7 +49,7 @@
 <div class="HomeOrder">
 
     <a href="@Url.Action("Index","Orders")">
-        
+
     </a>
     <a href="@Url.Action("Index","Orders")">Current Orders</a>
 </div>

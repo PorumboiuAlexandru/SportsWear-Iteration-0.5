@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using SportsWear2.Data;
 
 namespace SportsWear2.Controllers
 {
@@ -13,13 +14,12 @@ namespace SportsWear2.Controllers
     {
 
         public static Cart c1 = new Cart();
-        
-        private readonly StockContextcs _context;
-        
-        public CartController()
+
+        private readonly ApplicationDbContext _context;
+
+        public CartController(ApplicationDbContext context)
         {
-            
-            _context = new StockContextcs();
+            this._context = context;
             _context.Database.EnsureCreated();
         }
         /*
